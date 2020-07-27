@@ -1,7 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 const Header = () => {
+  
+  const history = useHistory();
+  const about = () => history.push("/about");
+  const index = () => history.push("/");
+  const login = () => history.push("/login");
+
+
   return (
     <div>
       <header className="text-gray-700 body-font">
@@ -22,10 +30,17 @@ const Header = () => {
             <span class="ml-3 text-xl">tailblocks</span>
           </a>
           <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a className="mr-5 hover:text-gray-900">Inicio</a>
-            <a className="mr-5 hover:text-gray-900">Acerca</a>
+            <a onClick={index} className="mr-5 hover:text-gray-900">
+              Inicio
+            </a>
+            <a onClick={about} className="mr-5 hover:text-gray-900">
+              Acerca
+            </a>
+            <a onClick={login} className="mr-5 hover:text-gray-900">
+              Login
+            </a>
           </nav>
-          <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">
+          <button class="inline-flex items-center callToAction border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">
             Comprar
             <svg
               fill="none"
