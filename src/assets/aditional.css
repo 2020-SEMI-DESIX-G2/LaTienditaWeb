@@ -6,3 +6,15 @@
   background-color: #525B76;
   color: white;
 }
+.callToAction:hover{
+  background-color: #A2C3A4;
+  color: white;
+}
+
+.byeDown{
+  margin-bottom: 10rem;
+}
+
+.unchinabajo{
+  margin-bottom: 2rem;
+}
