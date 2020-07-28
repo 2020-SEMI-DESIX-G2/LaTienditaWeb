@@ -11,19 +11,14 @@ const Testimonial = () => {
                 <img
                   alt="testimonial"
                   className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                  src="https://dummyimage.com/302x302"
+                  src="https://i.imgur.com/PUIuMzB.jpg"
                 />
                 <p className="leading-relaxed">
-                  Edison bulb retro cloud bread echo park, helvetica stumptown
-                  taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee
-                  ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
-                  adaptogen squid fanny pack vaporware.
+                Me ha ayudado a hidratar mi cabello, ya que, ha sido procesado exageradamente por los químicos habidos y por haber, 
+                mi cabello estaba desidratado, con falta de brillo y volumen todo esto ha cambiado gracias a la disciplina que te adoptado 
+                de utilizar habitualmente el  tratamiento capilar de dreams organic.
                 </p>
                 <span className="inline-block h-1 w-10 rounded bg-green-500 mt-6 mb-4"></span>
-                <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">
-                  HOLDEN CAULFIELD
-                </h2>
-                <p className="text-gray-500">Senior Product Designer</p>
               </div>
             </div>
             <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
@@ -31,19 +26,13 @@ const Testimonial = () => {
                 <img
                   alt="testimonial"
                   className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                  src="https://dummyimage.com/300x300"
+                  src="https://i.imgur.com/TSLtIQW.jpg"
                 />
                 <p className="leading-relaxed">
-                  Edison bulb retro cloud bread echo park, helvetica stumptown
-                  taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee
-                  ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
-                  adaptogen squid fanny pack vaporware.
+                Dreams organic ha cambiado la forma en la que se ve mi cabello, en especial
+                le dio un brillo natural a mi cabello y me ha crecido mucho en poco tiempo.
                 </p>
                 <span className="inline-block h-1 w-10 rounded bg-green-500 mt-6 mb-4"></span>
-                <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">
-                  ALPER KAMU
-                </h2>
-                <p className="text-gray-500">UI Develeoper</p>
               </div>
             </div>
             <div className="lg:w-1/3 lg:mb-0 p-4">
@@ -51,19 +40,13 @@ const Testimonial = () => {
                 <img
                   alt="testimonial"
                   className="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100"
-                  src="https://dummyimage.com/305x305"
+                  src="https://i.imgur.com/WHxxnKc.jpg"
                 />
                 <p className="leading-relaxed">
-                  Edison bulb retro cloud bread echo park, helvetica stumptown
-                  taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee
-                  ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut
-                  adaptogen squid fanny pack vaporware.
+                Dreams Organic ya es parte de mi día a día uso toda la linea desde la cabeza a los pies 
+                y es una experiencia increíble como todos sus productos dan resultados desde su primer uso.
                 </p>
                 <span className="inline-block h-1 w-10 rounded bg-green-500 mt-6 mb-4"></span>
-                <h2 className="text-gray-900 font-medium title-font tracking-wider text-sm">
-                  HENRY LETHAM
-                </h2>
-                <p className="text-gray-500">CTO</p>
               </div>
             </div>
           </div>
