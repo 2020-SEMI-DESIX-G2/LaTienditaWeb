@@ -1,14 +1,25 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, {useState} from "react";
 import { useHistory } from "react-router-dom";
 
-const Header = () => {
-  
+const Header = ({userLogged, saveUserLogged}) => {
+
   const history = useHistory();
   const about = () => history.push("/about");
   const index = () => history.push("/");
   const login = () => history.push("/login");
   const catalog = () => history.push("/catalog");
+
+  const sessionActions = () => {
+    if(userLogged.keys == null ){
+      login();
+    }
+    else {
+      saveUserLogged({
+        key: null
+      })
+    }
+  }
 
 
   return (
@@ -26,8 +37,8 @@ const Header = () => {
             <a onClick={about} className="mr-5 hover:text-gray-900 actionHand">
               Acerca
             </a>
-            <a onClick={login} className="mr-5 hover:text-gray-900 actionHand">
-              Login
+            <a onClick={sessionActions} className="mr-5 hover:text-gray-900 actionHand">
+              {userLogged.key == null ? <p>Iniciar sesion</p> : <p>Cerrar sesion</p>}
             </a>
           </nav>
           <button onClick={catalog} className=" actionHand inline-flex items-center callToAction border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">

@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-const RegisteredAlert = () => {
-  return (
-    <div
+const LoggedInAlert = () => {
+    return ( 
+        <div
       className=" unchinabajo bg-green-100 border-t-4 border-green-500 rounded-b text-teal-900 px-4 py-3 shadow-md"
       role="alert"
     >
@@ -17,11 +17,14 @@ const RegisteredAlert = () => {
           </svg>
         </div>
         <div>
-          <p className="font-bold">Registrado satisfactoriamente</p>
+          <p className="font-bold">Has iniciado sesion satisfactoriamente</p>
+          <p className="text-sm">
+            Ya puedes ver crear tu carrito y comprar!
+          </p>
         </div>
       </div>
     </div>
-  );
-};
-
-export default RegisteredAlert;
+     );
+}
+ 
+export default LoggedInAlert;

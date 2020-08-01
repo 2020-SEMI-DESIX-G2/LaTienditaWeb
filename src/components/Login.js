@@ -2,8 +2,9 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import EmptyFieldError from "./EmptyFieldError";
+import LoggedInAlert from './LoggedInAlert';
 
-const Login = ({ saveUserLogged }) => {
+const Login = ({ userLogged , saveUserLogged }) => {
   //states
   const [loginTrigger, saveLoginTrigger] = useState(false);
   const [error, saveError] = useState(false);
@@ -13,6 +14,8 @@ const Login = ({ saveUserLogged }) => {
   });
   //se sacan los valores de loginData
   const { email, password } = loginData;
+  
+  const index = () => history.push("/");
 
   useEffect(() => {
     const callLoginApi = () => {
@@ -39,7 +42,7 @@ const Login = ({ saveUserLogged }) => {
           .then((json) => {
             saveUserLogged({
               key: json.tkn
-            })
+            });
           });
           
       }
@@ -85,6 +88,7 @@ const Login = ({ saveUserLogged }) => {
         <div className="lg:w-1/2 md:w-2/3 mx-auto">
           <form onSubmit={handleSubmit}>
           {error ? <EmptyFieldError /> : null}
+          {userLogged.key!=null ? <LoggedInAlert /> : null }
             <div className="flex flex-wrap -m-2">
               <div className="p-2 w-1/2">
                 <input
@@ -117,12 +121,14 @@ const Login = ({ saveUserLogged }) => {
                 </button>
               </div>
               <div className="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+                { userLogged.key!= null ? null : 
                 <span>
                   <a className="text-green-500">No tienes una cuenta?</a>{" "}
-                  <a onClick={register} className="text-green-700">
+                  <a onClick={register} className="actionHand text-green-700">
                     registrate
                   </a>
                 </span>
+                 }
               </div>
             </div>
           </form>

@@ -17,11 +17,11 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Header />
+      <Header userLogged={userLogged} saveUserLogged={saveUserLogged} />
         <Switch>
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/login"  render={(props) => <Login {...props} saveUserLogged={saveUserLogged} />}  />
+          <Route exact path="/login"  render={(props) => <Login {...props} userLogged={userLogged} saveUserLogged={saveUserLogged} />}  />
           <Route exact path="/register" component={Register} />
           <Route exact path="/catalog" render={(props) => <Catalog {...props} userLogged={userLogged} cart={cart} saveCart={saveCart} />} />
         </Switch>
