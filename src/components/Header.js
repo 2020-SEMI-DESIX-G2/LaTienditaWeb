@@ -8,6 +8,7 @@ const Header = () => {
   const about = () => history.push("/about");
   const index = () => history.push("/");
   const login = () => history.push("/login");
+  const catalog = () => history.push("/catalog");
 
 
   return (
@@ -19,17 +20,17 @@ const Header = () => {
             <span className="ml-3 text-xl">Dreams organic</span>
           </a>
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a onClick={index} className="mr-5 hover:text-gray-900">
+            <a onClick={index} className="mr-5 hover:text-gray-900 actionHand">
               Inicio
             </a>
-            <a onClick={about} className="mr-5 hover:text-gray-900">
+            <a onClick={about} className="mr-5 hover:text-gray-900 actionHand">
               Acerca
             </a>
-            <a onClick={login} className="mr-5 hover:text-gray-900">
+            <a onClick={login} className="mr-5 hover:text-gray-900 actionHand">
               Login
             </a>
           </nav>
-          <button className="inline-flex items-center callToAction border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">
+          <button onClick={catalog} className=" actionHand inline-flex items-center callToAction border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">
             Comprar
             <svg
               fill="none"

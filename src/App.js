@@ -6,12 +6,14 @@ import LandingPage from "./components/LandingPage";
 import About from './components/About';
 import Login from './components/Login';
 import Register from './components/Register';
+import Catalog from './components/Catalog';
 
 
 function App() {
   const [userLogged, saveUserLogged] = useState({
-    key: ""
+    key: null
   });
+  const [cart, saveCart] = useState([]);
   return (
     <div className="App">
       <BrowserRouter>
@@ -21,6 +23,7 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/login"  render={(props) => <Login {...props} saveUserLogged={saveUserLogged} />}  />
           <Route exact path="/register" component={Register} />
+          <Route exact path="/catalog" render={(props) => <Catalog {...props} userLogged={userLogged} cart={cart} saveCart={saveCart} />} />
         </Switch>
       <Footer />
       </BrowserRouter>
