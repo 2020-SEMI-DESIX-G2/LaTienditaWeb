@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useState} from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 
-const Header = ({userLogged, saveUserLogged}) => {
+const Header = ({ userLogged, saveUserLogged }) => {
 
   const history = useHistory();
   const about = () => history.push("/about");
@@ -10,15 +10,12 @@ const Header = ({userLogged, saveUserLogged}) => {
   const login = () => history.push("/login");
   const catalog = () => history.push("/catalog");
 
-  const sessionActions = () => {
-    if(userLogged.keys == null ){
-      login();
-    }
-    else {
-      saveUserLogged({
-        key: null
-      })
-    }
+  const logOut = () => {
+    saveUserLogged({
+      key: null,
+      usr: null
+    })
+    index();
   }
 
 
@@ -37,9 +34,12 @@ const Header = ({userLogged, saveUserLogged}) => {
             <a onClick={about} className="mr-5 hover:text-gray-900 actionHand">
               Acerca
             </a>
-            <a onClick={sessionActions} className="mr-5 hover:text-gray-900 actionHand">
-              {userLogged.key == null ? <p>Iniciar sesion</p> : <p>Cerrar sesion</p>}
-            </a>
+            {userLogged.key == null ? <a onClick={login} className="mr-5 hover:text-gray-900 actionHand">
+              Iniciar sesion
+            </a> 
+            :<a onClick={logOut} className="mr-5 hover:text-gray-900 actionHand">
+                Cerrar sesion
+            </a>}
           </nav>
           <button onClick={catalog} className=" actionHand inline-flex items-center callToAction border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">
             Comprar

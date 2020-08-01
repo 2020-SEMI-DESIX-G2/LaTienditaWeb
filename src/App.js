@@ -11,8 +11,10 @@ import Catalog from './components/Catalog';
 
 function App() {
   const [userLogged, saveUserLogged] = useState({
-    key: null
+    key: null,
+    usr: null
   });
+  
   const [cart, saveCart] = useState([]);
   return (
     <div className="App">

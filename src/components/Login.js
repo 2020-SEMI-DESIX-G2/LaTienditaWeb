@@ -14,8 +14,7 @@ const Login = ({ userLogged , saveUserLogged }) => {
   });
   //se sacan los valores de loginData
   const { email, password } = loginData;
-  
-  const index = () => history.push("/");
+
 
   useEffect(() => {
     const callLoginApi = () => {
@@ -41,7 +40,8 @@ const Login = ({ userLogged , saveUserLogged }) => {
           // Displaying results to console
           .then((json) => {
             saveUserLogged({
-              key: json.tkn
+              key: json.tkn,
+              usr: json.usr
             });
           });
           
@@ -72,8 +72,6 @@ const Login = ({ userLogged , saveUserLogged }) => {
     saveError(false);
     saveLoginTrigger(true);
   };
-
-
 
   const history = useHistory();
   const register = () => history.push("/register");
