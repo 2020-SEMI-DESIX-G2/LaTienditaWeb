@@ -26,3 +26,7 @@
 .actionHand{
   cursor: pointer;
 }
+
+.title{
+  font-size: large;
+}

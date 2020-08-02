@@ -50,14 +50,16 @@ const ShoppingCart = ({ cart, userLogged }) => {
             <section className="text-gray-700 body-font">
                 <div className="container px-5 py-24 mx-auto">
                     <div className="unchinabajo lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-                        <h2 className="hidden lg:inline-block">Carrito de compra</h2>
-                        <p className="mb-8 leading-relaxed">Estos son los productos que has agregado al carrito.</p>
+                        <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">Carrito de compra</h2>
+                        <p className="mb-8 leading-relaxed">Estos son los productos que has agregado al carrito:</p>
                     </div>
                     <div className="flex flex-wrap -m-4">
                         {cart.map(item => (
                             <CartProduct key={item._id} product={item} />
                         ))}
                     </div>
+                    <hr/>
+                    <h2 className="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4">Total: ${order.total}</h2>
                     <PayPalCheckoutButton order={order} />
                 </div>
             </section>
