@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect, Fragment } from 'react';
 import Product from './Product';
+import NotLoggedAlert from './NotLoggedAlert';
 
 const Catalog = ({userLogged, cart , saveCart }) => {
     const [productList, saveProducts] = useState([]);
@@ -84,6 +85,7 @@ const Catalog = ({userLogged, cart , saveCart }) => {
             </section>
             <section className="text-gray-700 body-font">
                 <div className="container px-5 py-24 mx-auto">
+            { userLogged.key == null ? <NotLoggedAlert/> : null  }
                     <div className="flex flex-wrap -m-4">
                         {productList.map(item => (
                             <Product key={item._id} cart={cart} saveCart={saveCart} product={item} userLogged={userLogged} />

@@ -1,6 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Fragment } from "react";
+import { useHistory } from "react-router-dom";
+
+
 const Landing = () => {
+
+  const history = useHistory();
+  const catalog = () => history.push("/catalog");
   return (
     <Fragment>
       <section className="bgGreen text-gray-700 body-font">
@@ -11,11 +17,11 @@ const Landing = () => {
               <br className="hidden lg:inline-block" />
             </h1>
             <p className="mb-8 leading-relaxed">
-            Dale el mejor cuidado a tu cuerpo 
-            con nuestra linea de productos naturales preparamos un producto especial a tu necesidad que te cambiará desde su primer uso.
+              <p>Dale el mejor cuidado a tu cuerpo
+              con nuestra linea de productos naturales.</p> <br /> <p>Preparamos un producto especial a tu necesidad que te cambiará desde su primer uso.</p>
             </p>
             <div className="flex justify-center">
-              <button className="inline-flex text-white callToAction border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
+              <button onClick={catalog} className="inline-flex text-white callToAction border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
                 Ver mas
               </button>
             </div>
