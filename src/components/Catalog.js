@@ -3,20 +3,10 @@ import React, { useState, useEffect, Fragment } from 'react';
 import Product from './Product';
 import NotLoggedAlert from './NotLoggedAlert';
 import GoToCart from './GoToCart';
-import PayPalCheckoutButton from './PayPalCheckoutButton';
 
 const Catalog = ({userLogged, cart , saveCart }) => {
 
     const [CatalogProductList, saveProducts] = useState([]);
-
-    // const getTotal = () => {
-    //     let total = 0;
-    //     cart.forEach( (item) => {
-    //       total = total + item.price;
-    //     } )
-    //     return total;
-    //   };
-
 
     useEffect(() => {
         const consultar = async () => {

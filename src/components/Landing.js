@@ -16,10 +16,10 @@ const Landing = () => {
               Nuestros productos
               <br className="hidden lg:inline-block" />
             </h1>
-            <p className="mb-8 leading-relaxed">
+            <span className="mb-8 leading-relaxed">
               <p>Dale el mejor cuidado a tu cuerpo
               con nuestra linea de productos naturales.</p> <br /> <p>Preparamos un producto especial a tu necesidad que te cambiará desde su primer uso.</p>
-            </p>
+            </span>
             <div className="flex justify-center">
               <button onClick={catalog} className="inline-flex text-white callToAction border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg">
                 Ver mas

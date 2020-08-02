@@ -33,7 +33,7 @@ function App() {
           <Route exact path="/login"  render={(props) => <Login {...props} userLogged={userLogged} saveUserLogged={saveUserLogged} />}  />
           <Route exact path="/register" component={Register} />
           <Route exact path="/catalog" render={(props) => <Catalog {...props} userLogged={userLogged} cart={cart} saveCart={saveCart} />} />
-          <Route exact path="/cart" render={(props) => <ShoppingCart {...props} cart={cart} />} />
+          <Route exact path="/cart" render={(props) => <ShoppingCart {...props} cart={cart} userLogged={userLogged} />} />
         </Switch>
       <Footer />
       </BrowserRouter>
