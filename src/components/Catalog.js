@@ -2,12 +2,23 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import Product from './Product';
 import NotLoggedAlert from './NotLoggedAlert';
+import GoToCart from './GoToCart';
+import PayPalCheckoutButton from './PayPalCheckoutButton';
 
 const Catalog = ({userLogged, cart , saveCart }) => {
-    const [productList, saveProducts] = useState([]);
+
+    const [CatalogProductList, saveProducts] = useState([]);
+
+    // const getTotal = () => {
+    //     let total = 0;
+    //     cart.forEach( (item) => {
+    //       total = total + item.price;
+    //     } )
+    //     return total;
+    //   };
+
 
     useEffect(() => {
-
         const consultar = async () => {
             const url = 'http://localhost:5000/api/products';
             const response = await fetch(url);
@@ -85,9 +96,10 @@ const Catalog = ({userLogged, cart , saveCart }) => {
             </section>
             <section className="text-gray-700 body-font">
                 <div className="container px-5 py-24 mx-auto">
-            { userLogged.key == null ? <NotLoggedAlert/> : null  }
+                    { userLogged.key == null ? <NotLoggedAlert/> : <br/>  }
+                    { cart.length > 0 ? <GoToCart /> : null }
                     <div className="flex flex-wrap -m-4">
-                        {productList.map(item => (
+                        {CatalogProductList.map(item => (
                             <Product key={item._id} cart={cart} saveCart={saveCart} product={item} userLogged={userLogged} />
                         ))}
                     </div>

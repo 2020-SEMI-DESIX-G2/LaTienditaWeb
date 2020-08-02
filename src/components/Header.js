@@ -2,7 +2,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 
-const Header = ({ userLogged, saveUserLogged }) => {
+const Header = ({ userLogged, saveUserLogged, saveCart }) => {
 
   const history = useHistory();
   const about = () => history.push("/about");
@@ -15,6 +15,7 @@ const Header = ({ userLogged, saveUserLogged }) => {
       key: null,
       usr: null
     })
+    saveCart([]);
     index();
   }
 
