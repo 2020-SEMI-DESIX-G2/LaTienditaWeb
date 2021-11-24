@@ -33,7 +33,7 @@ const Header = ({ userLogged, saveUserLogged, saveCart }) => {
               Inicio
             </a>
             <a onClick={about} className="mr-5 hover:text-gray-900 actionHand" id="acerca">
-              Acerca
+              Acerca 
             </a>
             {userLogged.key == null ? <a onClick={login} className="mr-5 hover:text-gray-900 actionHand" id="initsession">
               Iniciar sesion
