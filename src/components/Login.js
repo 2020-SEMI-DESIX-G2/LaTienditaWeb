@@ -113,6 +113,7 @@ const Login = ({ userLogged , saveUserLogged }) => {
               <div className="p-2 w-full">
                 <button
                   type="submit"
+                  id="ingresar"
                   className=" callToAction flex mx-auto text-white bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg"
                 >
                   Ingresar
