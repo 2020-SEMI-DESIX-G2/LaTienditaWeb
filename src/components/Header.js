@@ -29,20 +29,20 @@ const Header = ({ userLogged, saveUserLogged, saveCart }) => {
             <span className="ml-3 text-xl">Dreams organic</span>
           </a>
           <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a onClick={index} className="mr-5 hover:text-gray-900 actionHand">
+            <a onClick={index} className="mr-5 hover:text-gray-900 actionHand" id="inicio">
               Inicio
             </a>
-            <a onClick={about} className="mr-5 hover:text-gray-900 actionHand">
-              Acerca
+            <a onClick={about} className="mr-5 hover:text-gray-900 actionHand" id="acerca">
+              Acerca 
             </a>
-            {userLogged.key == null ? <a onClick={login} className="mr-5 hover:text-gray-900 actionHand">
+            {userLogged.key == null ? <a onClick={login} className="mr-5 hover:text-gray-900 actionHand" id="initsession">
               Iniciar sesion
             </a> 
-            :<a onClick={logOut} className="mr-5 hover:text-gray-900 actionHand">
+            :<a onClick={logOut} className="mr-5 hover:text-gray-900 actionHand" id="closeSession">
                 Cerrar sesion
             </a>}
           </nav>
-          <button onClick={catalog} className=" actionHand inline-flex items-center callToAction border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">
+          <button id="comprar" onClick={catalog} className=" actionHand inline-flex items-center callToAction border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">
             Comprar
             <svg
               fill="none"
